@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3</title>
+</head>
+<body>
+    <h1>Student card FORM</h1>
+    <section>
+        <h2>Personal information</h2>
+        <fieldset>
+            <legend>Provide your details</legend>
+            <form action="submit.php" method="post">
+                <p>
+                    <label for="fullName">Full Name: </label>
+                    <input type="text" name="fullName" placeholder="Enter your full name"> 
+                </p>
+                
+                <p>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" placeholder="Enter your email"> 
+                </p>
+                
+                <p>
+                     <label for="password">Password: </label>
+                    <input type="password" name="password" placeholder="Enter your password"> 
+                </p>
+
+                <p>
+                    <label for="age">Age: </label>
+                    <input type="age" name="age"> 
+                </p>
+                
+                <p>
+                    <label for="dateOfBirth">Date of Birth: </label>
+                    <input type="date" name="dateOfBirth"> 
+                </p>
+                
+                <p>
+                    <label for="gender">Gender:</label><br>
+
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </p>
+                
+                <p>
+                    <label for="languagesKnown">Languages Known:</label> <br>
+                    
+                    <input type="checkbox" name="languagesKnown"> 
+                    <label for="">English</label><br>
+                    <input type="checkbox" name="languagesKnown"> 
+                    <label for="">Spanish</label><br>
+                    <input type="checkbox" name="languagesKnown"> 
+                    <label for="">French</label>
+                </p>
+
+                <p>
+                    <label for="country">Country: </label>
+                    <select name="country" id="country">
+                        <option value="">-- Select your country --</option>
+                        <option value="ua">Ukraine</option>
+                        <option value="pl">Poland</option>
+                        <option value="de">Germany</option>
+                        <option value="us">USA</option>
+                        <option value="uk">United Kingdom</option>
+                    </select>
+                </p>
+            </form>
+        </fieldset>
+    </section>
+    
+    <h1>College Subjects</h1>
+    <section>
+        <fieldset>
+            <legend>Select your subjects</legend>
+            <form action="submit.php" method="post">
+                <p>
+                     <label for="subjects">Subjects:</label> <br>
+                    <select name="subjects" id="subjects" multiple>
+                        <option value="math">Mathematics</option>
+                        <option value="computer_science">Computer Science</option>
+                        <option value="physics">Physics</option>
+                        <option value="chemistry">Chemistry</option>
+                    </select>
+                </p>
+                
+                <p>
+                    <label for="rate">Rate your interest in Computer Science: </label>
+                    <input type="range" name="rate">
+                </p>
+            </form>
+        </fieldset>
+    </section>
+
+    <h1>Skills Assesstment</h1>
+    <section>
+        <fieldset>
+            <legend>Assess your skills</legend>
+            <form action="submit.php" method="post">
+                <p>
+                   <label for="">Describe your skills:</label> <br>
+                   <textarea placeholder="List your skills here..."></textarea>
+                </p>
+                
+                <p>
+                  <label for="">Upload your resume: </label>
+                  <input type="file">
+                </p>
+
+                <p>
+                    <label for="">Pick your favorite color: </label>
+                    <input type="color">
+                </p>
+
+                <p>
+                    <label for="">Preffered study time: </label>
+                    <input type="time">
+                </p>
+
+                <p>
+                    <input type="submit" value="Submit Survey">
+                </p>
+            </form>
+        </fieldset>
+    </section>
+     <footer>
+        <p>© Copyright 2025 by Liashchenko Dmytro. All rights reversed.</p>
+    </footer>
+</body>
+</html>
