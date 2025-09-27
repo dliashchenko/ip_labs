@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+</head>
+<body>
+      <header>
+    <h1>Наш YouTube-канал — 
+      <a href="https://www.youtube.com/@itcollegelviv" target="_blank">
+        IT College Lviv
+      </a>
+    </h1>
+  </header>
+
+  <main>
+    <!-- 1 секція: Логотип -->
+    <section>
+      <img src="logo.png" alt="Логотип коледжу" height="300">
+    </section>
+
+    <!-- 2 секція: опис і кнопка -->
+    <section>
+      <p>Львівський IT коледж — сучасний навчальний заклад для підготовки спеціалістів.</p>
+      <button onclick="window.open('https://www.youtube.com/@itcollegelviv','_blank')">
+        Підписатися
+      </button>
+    </section>
+
+    <!-- 3 секція: відео -->
+    <section>
+      <h2>Навчальне відео</h2>
+      <video controls width="80%" height="540">
+        <source src="video1.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео. 
+        <a href="video1.mp4">Завантажити</a>
+      </video>
+    </section>
+
+    <!-- 4 секція: аудіо -->
+    <section>
+      <h2>Аудіо-приклад</h2>
+      <audio controls>
+        <source src="videoplayback.m4a" type="audio/mp4">
+        Ваш браузер не підтримує аудіо. 
+        <a href="videoplayback.m4a">Завантажити</a>
+      </audio>
+    </section>
+
+    <!-- 5 секція: YouTube -->
+    <section>
+      <h2>Відео з YouTube</h2>
+      <iframe width="80%" height="480"
+        src="https://www.youtube.com/embed/ВАШ_ID_ВІДЕО"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <!-- 6 секція: Google Maps -->
+    <section>
+      <h2>Google Карта</h2>
+      <iframe 
+        src="https://www.google.com/maps/d/embed?mid=ВАШ_ID_КАРТИ" 
+        width="80%" height="480">
+      </iframe>
+    </section>
+  </main>
+
+  <!-- aside з прев’ю -->
+  <aside>
+    <h2>Популярні відео</h2>
+    <a href="https://www.youtube.com/watch?v=ID1" target="_blank">
+      <img src="preview1.jpg" alt="Прев’ю 1"> Заголовок відео 1
+    </a>
+    <a href="https://www.youtube.com/watch?v=ID2" target="_blank">
+      <img src="preview2.jpg" alt="Прев’ю 2"> Заголовок відео 2
+    </a>
+    <a href="https://www.youtube.com/watch?v=ID3" target="_blank">
+      <img src="preview3.jpg" alt="Прев’ю 3"> Заголовок відео 3
+    </a>
+    <a href="https://www.youtube.com/watch?v=ID4" target="_blank">
+      <img src="preview4.jpg" alt="Прев’ю 4"> Заголовок відео 4
+    </a>
+    <a href="https://www.youtube.com/watch?v=ID5" target="_blank">
+      <img src="preview5.jpg" alt="Прев’ю 5"> Заголовок відео 5
+    </a>
+  </aside>
+
+</body>
+</html>
