@@ -6,6 +6,80 @@
     <title>Document</title>
 </head>
 <body>
-    
+      <header>
+    <h1>Наш YouTube-канал — 
+      <a href="https://www.youtube.com/@itcollegelviv" target="_blank">
+        IT College Lviv
+      </a>
+    </h1>
+  </header>
+
+  <main>
+    <section>
+      <img src="./img/logo.png" alt="Логотип коледжу" height="300">
+    </section>
+
+    <section>
+      <p>Львівський IT коледж — сучасний навчальний заклад для підготовки спеціалістів.</p>
+      <button onclick="window.open('https://www.youtube.com/@itcollegelviv','_blank')">
+        Підписатися
+      </button>
+    </section>
+
+
+    <section>
+      <h2>Навчальне відео</h2>
+      <video controls width="80%" height="540">
+        <source src="./video1.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео. 
+        <a href="video1.mp4">Завантажити</a>
+      </video>
+    </section>
+
+    <section>
+      <h2>Аудіо-приклад</h2>
+      <audio controls>
+        <source src="./videoplayback.mp3" type="audio/mp3">
+        Ваш браузер не підтримує аудіо. 
+        <a href="./videoplayback.mp3">Завантажити</a>
+      </audio>
+    </section>
+
+    <section>
+      <h2>Відео з YouTube</h2>
+      <iframe width="80%" height="480"
+        src="https://www.youtube.com/embed/"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <!-- 6 секція: Google Maps -->
+    <section>
+      <h2>Музеї та театри Львова</h2>
+      <iframe src="https://www.google.com/maps/d/embed?mid=1gxVN-73RjRk5tp7BKDl2WlwKRBlkbsU&ehbc=2E312F" width="80%" height="480"></iframe>
+    </section>
+  </main>
+
+  <!-- aside з прев’ю -->
+  <aside>
+    <h2>Популярні відео</h2>
+    <a href="https://www.youtube.com/watch?v=382835RQ734&list=PLd9fx3TgDGPW7c9KUrrKATR3OVmdLZIz6&index=1&pp=iAQB" target="_blank">
+      <img src="preview1.jpg" alt="Прев’ю 1"> Заголовок відео 1
+    </a>
+    <a href="https://youtu.be/tf-rbNaom5c?feature=shared" target="_blank">
+      <img src="preview2.jpg" alt="Прев’ю 2"> Заголовок відео 2
+    </a>
+    <a href="https://www.youtube.com/watch?v=9oaWLWo4yZ8&list=PLd9fx3TgDGPW7c9KUrrKATR3OVmdLZIz6&index=3&pp=iAQB" target="_blank">
+      <img src="preview3.jpg" alt="Прев’ю 3"> Заголовок відео 3
+    </a>
+    <a href="https://www.youtube.com/watch?v=5Drt8dK2GVE&list=PLd9fx3TgDGPW7c9KUrrKATR3OVmdLZIz6&index=4&pp=iAQB" target="_blank">
+      <img src="preview4.jpg" alt="Прев’ю 4"> Заголовок відео 4
+    </a>
+    <a href="https://www.youtube.com/watch?v=BLQe-gK7rMs&list=PLd9fx3TgDGPW7c9KUrrKATR3OVmdLZIz6&index=5&pp=iAQB" target="_blank">
+      <img src="preview5.jpg" alt="Прев’ю 5"> Заголовок відео 5
+    </a>
+  </aside>
 </body>
 </html>
