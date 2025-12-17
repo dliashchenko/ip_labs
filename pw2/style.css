@@ -1,0 +1,121 @@
+/* --- ЗМІННІ ТА БАЗОВІ СТИЛІ --- */
+:root {
+    --color-primary: #312783;
+    --color-accent: #f39200;
+    --color-text: #333;
+    --color-bg-gray: #f4f4f4;
+    --transition: 0.3s ease;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Arial', sans-serif; color: var(--color-text); line-height: 1.5; }
+
+.container { width: 100%; margin: 0 auto; padding: 0 15px; }
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- МОБІЛЬНИЙ (Mobile: до 767px) --- */
+@media (max-width: 767px) {
+    .page-header__top { flex-direction: column; text-align: center; padding: 15px 0; }
+    
+    .logo { flex-direction: column; gap: 10px; margin-bottom: 20px; }
+    .logo__icon { width: 60px; height: 60px; }
+    .logo__university { font-size: 14px; margin: 0; }
+    .logo__name { font-size: 16px; font-weight: bold; }
+
+    .lang-switcher__list { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+    .search-form { margin-top: 15px; display: flex; width: 100%; }
+    .search-form__input { flex: 1; padding: 10px; border: 1px solid #ccc; }
+
+    .main-nav { display: none; } /* Зазвичай ховається під бургер-меню */
+
+    .events-grid, .news-grid, .page-footer__grid { 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+    
+    .events-section__title, .news-section__title { font-size: 20px; text-align: center; }
+}
+
+/* --- ПЛАНШЕТ (Tablet: 768px – 1023px) --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container { max-width: 750px; }
+    
+    .page-header__top { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+    .logo { display: flex; align-items: center; gap: 15px; }
+    .logo__icon { width: 70px; height: 70px; }
+    
+    .main-nav__list { display: flex; flex-wrap: wrap; background: var(--color-primary); color: #fff; list-style: none; padding: 0; }
+    .main-nav__link { display: block; padding: 10px 15px; font-size: 13px; }
+
+    .events-grid, .news-grid { grid-template-columns: repeat(2, 1fr); display: grid; gap: 20px; }
+    .page-footer__grid { grid-template-columns: repeat(2, 1fr); display: grid; gap: 30px; }
+}
+
+/* --- ДЕСКТОП (Desktop: 1024px і більше) --- */
+@media (min-width: 1024px) {
+    .container { max-width: 1140px; }
+
+    /* Шапка */
+    .page-header__top { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; }
+    .logo { display: flex; align-items: center; gap: 20px; }
+    .logo__icon { width: 85px; height: 85px; }
+    .logo__university { font-size: 16px; margin: 0; text-transform: uppercase; }
+    .logo__name { font-size: 22px; font-weight: 800; display: block; }
+
+    .page-header__actions { display: flex; align-items: center; gap: 30px; }
+    .lang-switcher__list { display: flex; list-style: none; gap: 15px; padding: 0; font-size: 12px; }
+    .lang-switcher__link--active { color: var(--color-accent); font-weight: bold; }
+
+    .search-form { position: relative; border-bottom: 1px solid #ccc; }
+    .search-form__input { border: none; padding: 5px 30px 5px 5px; outline: none; }
+    .search-form__btn { position: absolute; right: 0; background: none; border: none; cursor: pointer; }
+
+    /* Навігація */
+    .main-nav { background: var(--color-primary); margin-top: 10px; }
+    .main-nav__list { display: flex; list-style: none; padding: 0; margin: 0; }
+    .main-nav__item { position: relative; }
+    .main-nav__link { display: block; padding: 15px 20px; color: #fff; font-weight: 600; text-transform: uppercase; font-size: 14px; }
+    .main-nav__link:hover { background: var(--color-accent); }
+
+    /* Dropdown */
+    .main-nav__submenu { 
+        position: absolute; top: 100%; left: 0; background: #fff; min-width: 250px; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: none; z-index: 100; padding: 10px 0; list-style: none;
+    }
+    .main-nav__item--dropdown:hover .main-nav__submenu { display: block; }
+    .main-nav__submenu a { display: block; padding: 10px 20px; color: var(--color-primary); font-size: 14px; }
+    .main-nav__submenu a:hover { background: var(--color-bg-gray); }
+
+    /* Контент */
+    .events-section, .news-section { padding: 50px 0; }
+    .events-section__title, .news-section__title { 
+        font-size: 28px; color: var(--color-primary); border-left: 5px solid var(--color-accent); padding-left: 15px; margin-bottom: 30px; 
+    }
+
+    .events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .event-card { display: flex; background: var(--color-bg-gray); border-radius: 8px; overflow: hidden; }
+    .event-card__img { width: 220px; object-fit: cover; transition: 0.5s; }
+    .event-card:hover .event-card__img { transform: scale(1.05); }
+    .event-card__body { padding: 25px; }
+    .event-card__date { color: var(--color-accent); font-weight: bold; font-size: 14px; }
+
+    .news-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+    .news-card { border: 1px solid #eee; transition: var(--transition); border-radius: 5px; overflow: hidden; }
+    .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .news-card__img-wrapper { height: 160px; overflow: hidden; }
+    .news-card__body { padding: 15px; }
+    .news-card__date { font-size: 12px; color: #888; }
+    .news-card__title { font-size: 16px; margin: 10px 0; height: 75px; overflow: hidden; color: var(--color-primary); }
+    .news-card__link { color: var(--color-accent); font-weight: bold; font-size: 13px; }
+
+    /* Футер */
+    .page-footer { background: #222; color: #ccc; padding: 60px 0; }
+    .page-footer__grid { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 50px; }
+    .page-footer__title { color: #fff; font-size: 18px; margin-bottom: 25px; }
+    .page-footer__list { list-style: none; padding: 0; }
+    .page-footer__list li { margin-bottom: 10px; }
+    .page-footer__list a:hover { color: var(--color-accent); padding-left: 5px; }
+    .page-footer__badge { height: 50px; margin: 0 15px 15px 0; filter: grayscale(1) brightness(2); }
+}
