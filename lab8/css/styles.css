@@ -12,9 +12,9 @@ body {
 }
 
 .navbar {
-    /*display: VALUE;*/
-    /*align-items: VALUE;*/
-    /*justify-content: VALUE;*/
+    display: flex; /* [cite: 26] */
+    align-items: center; /* [cite: 28, 33] */
+    justify-content: center; /* [cite: 27, 32] */
 }
 
 .menu-toggle {
@@ -43,9 +43,9 @@ body {
 
 /* Основний контейнер */
 .container {
-    display: grid;
-    /*grid-template-columns: VALUE;*/
-    gap: 20px;
+    display: grid; /* [cite: 39, 74] */
+    grid-template-columns: 4fr 1fr; /* Основна частина і бокова панель [cite: 75] */
+    gap: 20px; /* [cite: 41, 76] */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -53,8 +53,8 @@ body {
 
 /* Сітка новин - по замовчуванню */
 .news-grid {
-    /*display: VALUE;*/
-    grid-template-columns: repeat(3, 1fr);
+    display: grid; /* [cite: 45, 79] */
+    grid-template-columns: repeat(3, 1fr); /* Три стовпці за замовчуванням [cite: 46] */
     gap: 20px;
 }
 
@@ -71,8 +71,8 @@ body {
 }
 
 .aside-ad {
-    /*display: VALUE;*/
-    /*flex-direction: VALUE;*/
+    display: flex; /* [cite: 83] */
+    flex-direction: column; /* [cite: 84] */
     gap: 20px;
 }
 
@@ -83,11 +83,11 @@ body {
 
 /* Медіа-квері для адаптивного меню і сітки новин */
 
-/* Показ пудинг-меню для екранів до 767px */
-/*@media (VALUE)*/ {
+/* Показ гамбургер-меню для екранів до 767px */
+@media (max-width: 767px) { /* [cite: 88] */
     .container {
         display: flex;
-        /*flex-direction: VALUE;*/
+        flex-direction: column; /* [cite: 91] */
         gap: 20px;
     }
 
@@ -118,40 +118,57 @@ body {
 
     /* Блок aside переміщується вниз сторінки і займає всю ширину */
     .aside-ad {
-        width: 100%;
+        width: 100%; /* [cite: 97] */
         display: flex;
-        /*flex-direction: VALUE;*/
+        flex-direction: column; /* [cite: 99] */
     }
 
     /* Кожен рекламний блок займає 100% ширини */
     .ad-item {
-        width: 100%;
+        width: 100%; /* [cite: 102] */
     }
 
     /* Одна новина в рядку */
     .news-grid {
-        /*grid-template-columns: VALUE;*/
+        grid-template-columns: 1fr; /* [cite: 94] */
     }
 }
 
 /* Одна новина в рядку для екранів середнього розміру */
 @media (min-width: 481px) and (max-width: 767px) {
     .news-grid {
-        /*grid-template-columns: VALUE;*/
+        grid-template-columns: 1fr;
     }
 }
 
 /* Планшети (Великі екрани): 768px – 1024px */
 /* Дві новини в рядку для більших екранів */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr); /* [cite: 108] */
+    }
+}
 
 /* Малі ноутбуки або невеликі десктопи: 1025px – 1200px */
 /* Три новини в рядку */
-/* Додайте правило */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /* Середні десктопи та ноутбуки: 1201px – 1440px */
 /* Чотири новини в рядку */
-/* Додайте правило */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .news-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 /* Великі десктопи: 1441px і більше */
 /* Шість новин в рядку для дуже великих екранів */
-/* Додайте правило */
+@media (min-width: 1441px) {
+    .news-grid {
+        grid-template-columns: repeat(6, 1fr); /* [cite: 80, 81] */
+    }
+}
