@@ -1,6 +1,6 @@
 // Task 1
 
-// console.log(a); // undefined -- переміщується, але не інеціалізується
+// console.log(a); // undefined - переміщується, але не інеціалізується
 // var a = 10;
 // console.log(b); // ReferenceError
 // let b = 20;
